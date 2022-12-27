@@ -1,31 +1,22 @@
-<!-- <ion-content fullscreen class="ion-padding" scroll-y="false">
-  <swiper
-    [config]="config"
-    (swiper)="onSwiper($event)"
-    (slideChange)="onSlideChange()"
-  >
-    <ng-template swiperSlide>Slide 1</ng-template>
-    <ng-template swiperSlide>Slide 2</ng-template>
-    <ng-template swiperSlide>Slide 3</ng-template>
-    <ng-template swiperSlide>Slide 4</ng-template>
-    <ng-template swiperSlide>Slide 5</ng-template>
-    <ng-template swiperSlide>Slide 6</ng-template>
-  </swiper>
-</ion-content> -->
-
 <ion-content fullscreen class="slide p-0 py-2" scroll-y="false">
-  <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
+  <swiper
+    [autoplay]="true"
+    [keyboard]="true"
+    [pagination]="true"
+    [scrollbar]="true"
+    [zoom]="true"
+    (swiper)="setSwiperInstance($event)"
+  >
+    <ng-template swiperSlide>
       <ion-grid>
         <ion-row>
           <ion-col size="12" class="hero-section">
-            <div class="mb-2">
+            <div class="mb-2 pt-4">
               <img
                 src="../../assets/icon/undraw_junior_soccer_6sop.svg"
                 alt="sport"
               />
-              <br />
-              <span>let's get you set up</span>
+              <p>let's get you set up</p>
             </div>
             <form class="text-left px-2">
               <div class="form-group">
@@ -83,36 +74,199 @@
                 <input type="text" class="form-control" placeholder="City" />
               </div>
             </form>
-            <div class="text-center pt-4">
-              <button type="button" class="btn btn-primary">Next</button>
+            <div class="text-center pt-2">
+              <ion-button class="block" color="dark" (click)="nextSlide()">
+                Next
+              </ion-button>
             </div>
           </ion-col>
         </ion-row>
       </ion-grid>
-    </ion-slide>
-    <ion-slide>
-      <h2>What is Ionic?</h2>
-      <p>
-        <b>Ionic Framework</b> is an open source SDK that enables developers to
-        build high quality mobile apps with web technologies like HTML, CSS, and
-        JavaScript.
-      </p>
-    </ion-slide>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+      >
+        <div class="p-2 bd-highlight align-self-start text-left">
+          <h3>Apple Health</h3>
+          <p>
+            keep track of all your fitness data by syncing rectime with Apple
+            Health
+          </p>
+        </div>
 
-    <ion-slide>
-      <h2>What is Appflow?</h2>
-      <p>
-        <b>Appflow</b> is a powerful set of services and features built on top
-        of Ionic Framework that brings a totally new level of app development
-        agility to mobile dev teams.
-      </p>
-    </ion-slide>
+        <div class="p-2 bd-highlight align-self-end">
+          <p class="text-left">
+            this information will flow both ways, Infinity will display all
+            third party activities synced with AH
+          </p>
+          <div class="text-center pt-2">
+            <ion-button class="block" color="dark" (click)="nextSlide()">
+              Allow
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+      >
+        <div class="p-2 bd-highlight align-self-start text-left">
+          <h3>Meet Infinity</h3>
+          <p>
+            Infinity allows a customised experience exploring the rectime
+            universe
+          </p>
+        </div>
 
-    <ion-slide>
-      <h2>Ready to Play?</h2>
-      <ion-button fill="clear"
-        >Continue <ion-icon slot="end" name="arrow-forward"></ion-icon
-      ></ion-button>
-    </ion-slide>
-  </ion-slides>
+        <div class="p-2 bd-highlight align-self-center text-center">
+          <h4 class="text-secondary">[ANIMATED BACKDROP]</h4>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-end">
+          <p class="text-left">
+            to enjoy our services please allow rectime to utilise your workout &
+            behavioral information
+            <br />
+            <small>MORE INFO</small>
+          </p>
+
+          <div class="text-center pt-4">
+            <ion-button class="block" color="dark" (click)="nextSlide()">
+              Allow
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+      >
+        <div class="p-2 bd-highlight align-self-start text-left">
+          <h3>Animation</h3>
+          <p>
+            simple video showing a detailed explanation of the problem + our
+            solution and how the app flows
+          </p>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-center text-center">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-end">
+          <p class="text-left">
+            to enjoy our services please allow rectime to utilise your workout &
+            behavioral information
+            <br />
+            <small>MORE INFO</small>
+          </p>
+
+          <div class="text-center pt-4">
+            <ion-button class="block" color="dark" (click)="nextSlide()">
+              Next
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+      >
+        <div class="p-2 bd-highlight align-self-start text-left">
+          <h3>Sports</h3>
+          <p>select the sports you want infinity to focus</p>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-center text-center">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-end">
+          <p class="text-left">
+            something missing? as the community grows, so will the
+            sports/activities we cover
+          </p>
+
+          <div class="text-center pt-2">
+            <ion-button class="block" color="dark" (click)="nextSlide()">
+              Next
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+      >
+        <div class="p-2 bd-highlight align-self-start text-left">
+          <h3>Playercard</h3>
+          <p>the sports you selected will feature on your playercard</p>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-center text-center">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-end">
+          <p class="text-left">
+            this helps infinity connect you with the perfect opponent or partner
+          </p>
+
+          <div class="text-center pt-4">
+            <ion-button class="block" color="dark" (click)="nextSlide()">
+              Next
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+      >
+        <div class="p-2 bd-highlight align-self-start text-left">
+          <h3>All Set!</h3>
+          <p>before matchmaking the coach will need a little more info</p>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-center text-center">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="p-2 bd-highlight align-self-end">
+          <p class="text-left">
+            head over to the coach tab on the home screen for a full
+            walk-through
+          </p>
+
+          <div class="text-center pt-4">
+            <ion-button class="block" color="dark" type="submit">
+              Done
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
 </ion-content>
