@@ -1,0 +1,43 @@
+<ion-app>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+
+  <ion-content class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="hero-section">
+          <img
+            src="../../assets/icon/undraw_junior_soccer_6sop.svg"
+            alt="sport"
+            class="mb-5"
+          />
+          <form class="text-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="UserName" />
+            </div>
+            <div class="form-group m-0">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+              />
+            </div>
+            <div class="form-group text-right">
+              <small>password <a [routerLink]="['#']">trouble?</a></small>
+            </div>
+          </form>
+        </ion-col>
+        <ion-col size="12" class="button-container">
+          <span>Login With</span>
+          <ion-button expand="block" class="block">
+            <span style="text-transform: none !important">Google</span>
+          </ion-button>
+          <ion-button expand="block">
+            <span style="text-transform: none !important">Apple</span>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-app>

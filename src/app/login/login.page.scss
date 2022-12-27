@@ -1,0 +1,29 @@
+.ion-padding {
+  text-align: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  img {
+    width: 160px;
+    object-fit: contain;
+  }
+  .hero-section {
+    min-height: 60vh;
+    padding-top: 30px;
+    small {
+      color: gray;
+      font-weight: 400;
+    }
+    a {
+      color: #000;
+      font-weight: 600;
+    }
+  }
+  .button-container {
+    height: 20vh;
+    padding-top: 40px;
+  }
+}
+
+span {
+  font-size: 14px;
+}

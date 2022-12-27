@@ -1,0 +1,29 @@
+<ion-app>
+  <ion-content class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="hero-section">
+          <img
+            src="../../assets/icon/undraw_junior_soccer_6sop.svg"
+            alt="sport"
+            class="mb-3"
+          />
+          <h1>Rectime</h1>
+          <span>Let change the way we play and discover sport</span>
+        </ion-col>
+        <ion-col size="12" class="button-container">
+          <ion-button [routerLink]="['/login']" expand="block" class="block">
+            <span style="text-transform: none !important">Login</span>
+          </ion-button>
+          <ion-button
+            [routerLink]="['/registration']"
+            expand="block"
+            fill="outline"
+          >
+            <span style="text-transform: none !important">Sign Up</span>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-app>

@@ -1,0 +1,20 @@
+.ion-padding {
+  text-align: center;
+  height: 100vh;
+  img {
+    width: 160px;
+    object-fit: contain;
+  }
+  .hero-section {
+    height: 60vh;
+    padding-top: 30px;
+  }
+  .button-container {
+    padding-top: 60px;
+    height: 20vh;
+  }
+}
+
+.button-native {
+  text-transform: capitalize !important;
+}

@@ -1,0 +1,118 @@
+<!-- <ion-content fullscreen class="ion-padding" scroll-y="false">
+  <swiper
+    [config]="config"
+    (swiper)="onSwiper($event)"
+    (slideChange)="onSlideChange()"
+  >
+    <ng-template swiperSlide>Slide 1</ng-template>
+    <ng-template swiperSlide>Slide 2</ng-template>
+    <ng-template swiperSlide>Slide 3</ng-template>
+    <ng-template swiperSlide>Slide 4</ng-template>
+    <ng-template swiperSlide>Slide 5</ng-template>
+    <ng-template swiperSlide>Slide 6</ng-template>
+  </swiper>
+</ion-content> -->
+
+<ion-content fullscreen class="slide p-0 py-2" scroll-y="false">
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="hero-section">
+            <div class="mb-2">
+              <img
+                src="../../assets/icon/undraw_junior_soccer_6sop.svg"
+                alt="sport"
+              />
+              <br />
+              <span>let's get you set up</span>
+            </div>
+            <form class="text-left px-2">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="UserName"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Full Name"
+                />
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="email" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Mobile" />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-6">
+                  <input type="text" class="form-control" placeholder="Age" />
+                </div>
+                <div class="form-group col-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Gender"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Height"
+                  />
+                </div>
+                <div class="form-group col-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Weight"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Country" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="City" />
+              </div>
+            </form>
+            <div class="text-center pt-4">
+              <button type="button" class="btn btn-primary">Next</button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <h2>What is Ionic?</h2>
+      <p>
+        <b>Ionic Framework</b> is an open source SDK that enables developers to
+        build high quality mobile apps with web technologies like HTML, CSS, and
+        JavaScript.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>What is Appflow?</h2>
+      <p>
+        <b>Appflow</b> is a powerful set of services and features built on top
+        of Ionic Framework that brings a totally new level of app development
+        agility to mobile dev teams.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <h2>Ready to Play?</h2>
+      <ion-button fill="clear"
+        >Continue <ion-icon slot="end" name="arrow-forward"></ion-icon
+      ></ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
