@@ -59,6 +59,11 @@ span {
   background: rebeccapurple !important;
 }
 
+.blue-bg {
+  background-color: #edf7e4;
+  width: 100%;
+}
+
 .health-section {
   height: 88.5vh;
   h3 {
@@ -66,5 +71,13 @@ span {
   }
   .embed-responsive-item {
     width: 100%;
+  }
+
+  .bg-none {
+    background: none;
+  }
+
+  .coach-section {
+    height: 100px;
   }
 }
