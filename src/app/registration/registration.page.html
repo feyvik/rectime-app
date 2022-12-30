@@ -186,11 +186,21 @@
         </div>
 
         <div class="p-2 bd-highlight align-self-center text-center">
-          <iframe
-            class="embed-responsive-item"
-            src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-            allowfullscreen
-          ></iframe>
+          <div class="d-flex bd-highlight flex-wrap">
+            <div
+              class="p-2 bd-highlight"
+              *ngFor="let tons of availableSports; let ati = index"
+            >
+              <button
+                (click)="toggleSelectedAvailableSports(ati)"
+                type="button"
+                class="text-nowrap btn"
+                [ngClass]="availableSports[ati].selected ? 'button-dark' : 'button-border'"
+              >
+                {{ tons.text }}
+              </button>
+            </div>
+          </div>
         </div>
 
         <div class="p-2 bd-highlight align-self-end">

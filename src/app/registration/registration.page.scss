@@ -80,4 +80,16 @@ span {
   .coach-section {
     height: 100px;
   }
+
+  .button-dark {
+    background-color: #222428 !important;
+    color: #fff;
+  }
+  .button-border {
+    border: 1px solid #222428 !important;
+  }
+}
+.btn {
+  box-shadow: none !important;
+  outline: none;
 }
