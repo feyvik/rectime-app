@@ -11,6 +11,43 @@
       <ion-grid>
         <ion-row>
           <ion-col size="12" class="hero-section">
+            <img
+              src="../../assets/icon/undraw_junior_soccer_6sop.svg"
+              alt="sport"
+              class="mb-5"
+            />
+
+            <div class="row m-0 align-items-center" style="height: 60vh">
+              <form class="text-left col-12" style="height: unset">
+                <div class="form-group col-12">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="UserName"
+                  />
+                </div>
+                <div class="form-group col-12">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="text-center pt-2">
+              <ion-button class="block" color="dark" (click)="nextSlide()">
+                Next
+              </ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="hero-section">
             <div class="mb-2 pt-4">
               <img
                 src="../../assets/icon/undraw_junior_soccer_6sop.svg"
