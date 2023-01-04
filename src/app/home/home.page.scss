@@ -1,8 +1,10 @@
 .ion-padding {
   text-align: center;
+  background-color: #122132 !important;
+  color: #fff;
   height: 100vh;
   img {
-    width: 160px;
+    width: 100px;
     object-fit: contain;
   }
   .hero-section {
@@ -12,6 +14,14 @@
   .button-container {
     padding-top: 60px;
     height: 20vh;
+    .block {
+      background-color: #213241;
+      color: #fff;
+    }
+    .button-sky {
+      background-color: #59b6e1;
+      color: #fff;
+    }
   }
 }
 

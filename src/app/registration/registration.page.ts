@@ -27,17 +27,66 @@ export class RegistrationPage implements OnInit {
     { text: 'Cycling', selected: false },
     { text: 'Basketball', selected: false },
   ];
+  slideContainer: any;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.slideContainer = document.getElementById('slideContainer');
+  }
 
   setSwiperInstance(swiper: any) {
     this.slides = swiper;
+    if (this.slides.activeIndex == 0) {
+      this.slideContainer.classList.add('slide');
+    }
   }
 
   nextSlide() {
     this.slides.slideNext();
+    if (this.slides.activeIndex === 2) {
+      this.slideContainer.classList.remove('slide');
+      this.slideContainer.classList.remove('appleHealth');
+      this.slideContainer.classList.remove('infinity');
+      this.slideContainer.classList.remove('playercard');
+      this.slideContainer.classList.remove('set');
+      this.slideContainer.classList.add('animation');
+    } else if (this.slides.activeIndex === 3) {
+      this.slideContainer.classList.remove('slide');
+      this.slideContainer.classList.remove('infinity');
+      this.slideContainer.classList.remove('playercard');
+      this.slideContainer.classList.remove('set');
+      this.slideContainer.classList.remove('animation');
+      this.slideContainer.classList.add('appleHealth');
+    } else if (this.slides.activeIndex === 4) {
+      this.slideContainer.classList.remove('slide');
+      this.slideContainer.classList.remove('playercard');
+      this.slideContainer.classList.remove('set');
+      this.slideContainer.classList.remove('animation');
+      this.slideContainer.classList.remove('appleHealth');
+      this.slideContainer.classList.add('infinity');
+    } else if (this.slides.activeIndex === 5) {
+      this.slideContainer.classList.remove('slide');
+      this.slideContainer.classList.remove('infinity');
+      this.slideContainer.classList.remove('set');
+      this.slideContainer.classList.remove('animation');
+      this.slideContainer.classList.remove('appleHealth');
+      this.slideContainer.classList.add('playercard');
+    } else if (this.slides.activeIndex === 6) {
+      this.slideContainer.classList.remove('slide');
+      this.slideContainer.classList.remove('infinity');
+      this.slideContainer.classList.remove('playercard');
+      this.slideContainer.classList.remove('animation');
+      this.slideContainer.classList.remove('appleHealth');
+      this.slideContainer.classList.add('set');
+    } else if (this.slides.activeIndex === 7) {
+      this.slideContainer.classList.remove('slide');
+      this.slideContainer.classList.remove('appleHealth');
+      this.slideContainer.classList.remove('infinity');
+      this.slideContainer.classList.remove('playercard');
+      this.slideContainer.classList.remove('set');
+      this.slideContainer.classList.add('animation');
+    }
   }
 
   prevSlide() {

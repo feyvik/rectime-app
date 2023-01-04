@@ -67,3 +67,13 @@ span {
 small {
   font-size: 10px;
 }
+button {
+  width: 100%;
+  padding: 16px 20px;
+  background: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.progress {
+  height: 0.4rem !important;
+}

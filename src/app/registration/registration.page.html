@@ -1,325 +1,482 @@
-<ion-content fullscreen class="slide p-0 py-2" scroll-y="false">
-  <swiper
-    [autoplay]="true"
-    [keyboard]="true"
-    [pagination]="true"
-    [scrollbar]="true"
-    [zoom]="true"
-    (swiper)="setSwiperInstance($event)"
-  >
-    <ng-template swiperSlide>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12" class="hero-section">
-            <img
-              src="../../assets/icon/undraw_junior_soccer_6sop.svg"
-              alt="sport"
-              class="mb-5"
-            />
-
-            <div class="row m-0 align-items-center" style="height: 60vh">
-              <form class="text-left col-12" style="height: unset">
-                <div class="form-group col-12">
+<ion-content fullscreen scroll-y="false">
+  <div id="slideContainer" class="hero-section">
+    <swiper
+      [autoplay]="true"
+      [keyboard]="true"
+      [pagination]="true"
+      [scrollbar]="true"
+      [zoom]="true"
+      (swiper)="setSwiperInstance($event)"
+    >
+      <ng-template swiperSlide>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12" class="health-section">
+              <div class="mb-2 pt-2">
+                <img
+                  src="../../assets/icon/logo.svg"
+                  alt="sport"
+                  class="mb-2"
+                />
+                <p>let's get you set up</p>
+              </div>
+              <form class="text-left px-2">
+                <div class="form-group">
                   <input
                     type="text"
                     class="form-control"
                     placeholder="UserName"
                   />
                 </div>
-                <div class="form-group col-12">
+                <div class="form-group">
                   <input
-                    type="password"
+                    type="text"
                     class="form-control"
-                    placeholder="Password"
+                    placeholder="Full Name"
                   />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Mobile"
+                  />
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-6">
+                    <input type="text" class="form-control" placeholder="Age" />
+                  </div>
+                  <div class="form-group col-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Gender"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Height"
+                    />
+                  </div>
+                  <div class="form-group col-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Weight"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Country"
+                  />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="City" />
                 </div>
               </form>
-            </div>
-            <div class="text-center pt-2">
-              <ion-button class="block" color="dark" (click)="nextSlide()">
-                Next
-              </ion-button>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ng-template>
-    <ng-template swiperSlide>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12" class="hero-section">
-            <div class="mb-2 pt-4">
-              <img
-                src="../../assets/icon/undraw_junior_soccer_6sop.svg"
-                alt="sport"
-              />
-              <p>let's get you set up</p>
-            </div>
-            <form class="text-left px-2">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="UserName"
-                />
+              <div class="text-center pt-2">
+                <button class="primary" (click)="nextSlide()">Next</button>
               </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Full Name"
-                />
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="email" />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Mobile" />
-              </div>
-              <div class="form-row">
-                <div class="form-group col-6">
-                  <input type="text" class="form-control" placeholder="Age" />
-                </div>
-                <div class="form-group col-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Gender"
-                  />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Height"
-                  />
-                </div>
-                <div class="form-group col-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Weight"
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Country" />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="City" />
-              </div>
-            </form>
-            <div class="text-center pt-2">
-              <ion-button class="block" color="dark" (click)="nextSlide()">
-                Next
-              </ion-button>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div
-        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
-      >
-        <div class="p-2 bd-highlight align-self-start text-left">
-          <h3>Apple Health</h3>
-          <p>
-            keep track of all your fitness data by syncing rectime with Apple
-            Health
-          </p>
-        </div>
-
-        <div class="p-2 bd-highlight align-self-end">
-          <p class="text-left">
-            this information will flow both ways, Infinity will display all
-            third party activities synced with AH
-          </p>
-          <div class="text-center pt-2">
-            <ion-button class="block" color="dark" (click)="nextSlide()">
-              Allow
-            </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div
+          class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+        >
+          <div class="p-2 bd-highlight align-self-start text-left">
+            <h3>Sports</h3>
+            <p>Select the sports you want infinity to focus</p>
           </div>
-        </div>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div
-        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
-      >
-        <div class="p-2 bd-highlight align-self-start text-left">
-          <h3>Meet Infinity</h3>
-          <p>
-            Infinity allows a customised experience exploring the rectime
-            universe
-          </p>
-        </div>
 
-        <div class="p-2 bd-highlight align-self-center text-center">
-          <h4 class="text-secondary">[ANIMATED BACKDROP]</h4>
-        </div>
-
-        <div class="p-2 bd-highlight align-self-end">
-          <p class="text-left">
-            to enjoy our services please allow rectime to utilise your workout &
-            behavioral information
-            <br />
-            <small>MORE INFO</small>
-          </p>
-
-          <div class="text-center pt-4">
-            <ion-button class="block" color="dark" (click)="nextSlide()">
-              Allow
-            </ion-button>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div
-        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
-      >
-        <div class="p-2 bd-highlight align-self-start text-left">
-          <h3>Animation</h3>
-          <p>
-            simple video showing a detailed explanation of the problem + our
-            solution and how the app flows
-          </p>
-        </div>
-
-        <div class="p-2 bd-highlight align-self-center text-center">
-          <iframe
-            class="embed-responsive-item"
-            src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <div class="p-2 bd-highlight align-self-end">
-          <p class="text-left">
-            to enjoy our services please allow rectime to utilise your workout &
-            behavioral information
-            <br />
-            <small>MORE INFO</small>
-          </p>
-
-          <div class="text-center pt-4">
-            <ion-button class="block" color="dark" (click)="nextSlide()">
-              Next
-            </ion-button>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div
-        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
-      >
-        <div class="p-2 bd-highlight align-self-start text-left">
-          <h3>Sports</h3>
-          <p>select the sports you want infinity to focus</p>
-        </div>
-
-        <div class="p-2 bd-highlight align-self-center text-center">
-          <div class="d-flex bd-highlight flex-wrap">
-            <div
-              class="p-2 bd-highlight"
-              *ngFor="let tons of availableSports; let ati = index"
-            >
-              <button
-                (click)="toggleSelectedAvailableSports(ati)"
-                type="button"
-                class="text-nowrap btn"
-                [ngClass]="availableSports[ati].selected ? 'button-dark' : 'button-border'"
+          <div class="p-2 bd-highlight align-self-center text-center">
+            <div class="d-flex bd-highlight flex-wrap">
+              <div
+                class="p-2 bd-highlight"
+                *ngFor="let tons of availableSports; let ati = index"
               >
-                {{ tons.text }}
+                <button
+                  (click)="toggleSelectedAvailableSports(ati)"
+                  type="button"
+                  class="text-nowrap btn"
+                  [ngClass]="availableSports[ati].selected ? 'button-dark' : 'button-border'"
+                >
+                  {{ tons.text }}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-2 bd-highlight align-self-end">
+            <p class="text-left">
+              something missing? <br />
+              as the community grows, so will the sports/activities we cover
+            </p>
+
+            <div class="text-center pt-2">
+              <button class="primary" (click)="nextSlide()">Next</button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div
+          class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+        >
+          <div class="p-2 bd-highlight align-self-start text-left">
+            <h3 class="mt-1">Animation</h3>
+            <p class="mb-0">
+              showing a detailed explanation of the problem + our solution and
+              how the app flows
+            </p>
+          </div>
+
+          <div class="p-2 bd-highlight align-self-center text-center srcoll-y">
+            <div class="col">
+              <div class="timeline">
+                <div class="timeline__content right">
+                  <div class="content pl-3 py-2">
+                    <div class="exp">
+                      <h6 class="exp_header">CONNECT WITH PLAYERS</h6>
+                      <span class="exp__list">
+                        It’s hard finding the perfect playing partner, match
+                        with people nearby with similar interests and skill
+                        levels
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__content right">
+                  <div class="content pl-3 py-2">
+                    <div class="exp">
+                      <h6 class="exp_header">FIND AN ARENA</h6>
+                      <span class="exp__list">
+                        Find local sporting venues to battle your way to the top
+                        by defeating players and earn rewards
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__content right">
+                  <div class="content pl-3 py-2">
+                    <div class="exp">
+                      <h6 class="exp_header">PLAY</h6>
+                      <span class="exp__list">
+                        Battle it out in ranked play or take it easy and play
+                        casual games to earn XP and level up
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-2 bd-highlight align-self-end">
+            <p class="text-left mb-0">
+              to enjoy our services please allow rectime to utilise your workout
+              & behavioral information
+              <br />
+              <small>MORE INFO</small>
+            </p>
+            <div class="text-center mt-1">
+              <button class="primary" (click)="nextSlide()">Next</button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div
+          class="d-flex flex-column bd-highlight mb-3 health-section apple-health justify-content-between px-2"
+        >
+          <div class="p-2 bd-highlight align-self-start text-left">
+            <h3>Apple Health</h3>
+            <p class="m-0">
+              keep track of all your fitness data by syncing rectime with Apple
+              Health
+            </p>
+          </div>
+
+          <div class="p-2 bd-highlight align-self-center text-center">
+            <img
+              src="../../assets/icon/watchimage.png"
+              alt="Watch"
+              width="100%"
+            />
+          </div>
+
+          <div class="p-2 bd-highlight align-self-end">
+            <p class="text-left">
+              this information will flow both ways, Infinity will display all
+              third party activities synced with AH
+            </p>
+            <div class="text-center">
+              <button class="light" type="button" (click)="nextSlide()">
+                Allow
+              </button>
+              <button type="button" class="skip" (click)="nextSlide()">
+                skip
               </button>
             </div>
           </div>
         </div>
-
-        <div class="p-2 bd-highlight align-self-end">
-          <p class="text-left">
-            something missing? as the community grows, so will the
-            sports/activities we cover
-          </p>
-
-          <div class="text-center pt-2">
-            <ion-button class="block" color="dark" (click)="nextSlide()">
-              Next
-            </ion-button>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div
+          class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+        >
+          <div class="p-2 bd-highlight align-self-start text-left">
+            <h3>Meet Infinity</h3>
+            <p>
+              Infinity allows a customised experience exploring the rectime
+              universe
+            </p>
           </div>
-        </div>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div
-        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
-      >
-        <div class="p-2 bd-highlight align-self-start text-left">
-          <h3>Playercard</h3>
-          <p>the sports you selected will feature on your playercard</p>
-        </div>
 
-        <div class="p-2 px-3 bd-highlight align-self-center text-center">
-          <img
-            src="../../assets/icon/undraw_basketball_re_7701.svg"
-            alt="basketball"
-            width="60px"
-          />
-        </div>
-
-        <div class="p-2 px-3 bd-highlight align-self-end">
-          <p class="text-left">
-            this helps infinity connect you with the perfect opponent or partner
-          </p>
-
-          <div class="text-center pt-4">
-            <ion-button class="block" color="dark" (click)="nextSlide()">
-              Next
-            </ion-button>
+          <div class="p-2 bd-highlight align-self-center text-center">
+            <img src="../../assets/icon/infinityimage.png" alt="infinity" />
           </div>
-        </div>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div
-        class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between blue-bg"
-      >
-        <div class="px-4 py-2 bd-highlight align-self-start text-left bg-white">
-          <h3>All Set!</h3>
-          <p>before matchmaking the coach will need a little more info</p>
-        </div>
 
-        <div class="px-4 py-2 bd-highlight align-self-start text-left">
-          <div class="d-flex flex-column bd-highlight justify-content-between">
-            <div class="bd-highlight coach-section"></div>
-            <div class="bd-highlight">
-              <img
-                src="../../assets/icon/undraw_nature_m5ll.svg"
-                alt="wheel"
-                width="30px"
-              />
-              <p class="font-weight-bold">IMAGE OF A COACH TAB</p>
+          <div class="p-2 bd-highlight align-self-end">
+            <p class="text-left">
+              to enjoy our services please allow rectime to utilise your workout
+              & behavioral information
+              <br />
+              <small style="color: #21193f"><i>MORE INFO</i></small>
+            </p>
+
+            <div class="text-center pt-4">
+              <button class="light" type="button" (click)="nextSlide()">
+                Allow
+              </button>
+              <button type="button" class="skip" (click)="nextSlide()">
+                skip
+              </button>
             </div>
           </div>
         </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div
+          class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+        >
+          <div class="p-2 bd-highlight align-self-start text-left">
+            <h3>Playercard</h3>
+            <p>the sports you selected will feature on your playercard</p>
+          </div>
 
-        <div class="px-3 pt-4 pb-2 bd-highlight align-self-end bg-white">
-          <p class="text-left">
-            head over to the coach tab on the home screen for a full
-            walk-through
-          </p>
+          <div class="p-2 px-3 bd-highlight align-self-center text-center">
+            <img
+              src="../../assets/icon/runnerimagerectime.png"
+              alt="play card"
+            />
+          </div>
 
-          <div class="text-center">
-            <ion-button class="block" color="dark" type="submit">
-              Done
-            </ion-button>
+          <div class="p-2 px-3 bd-highlight align-self-end">
+            <p class="text-left">
+              this helps infinity connect you with the perfect opponent or
+              partner
+            </p>
+
+            <div class="text-center pt-4">
+              <button class="light" type="button" (click)="nextSlide()">
+                Next
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </ng-template>
-  </swiper>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div
+          class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between"
+        >
+          <div class="px-2 pb-2 bd-highlight align-self-start text-left">
+            <h3 class="mb-1">All Set!</h3>
+            <p class="mb-0">
+              before matchmaking the coach will need a little more info
+            </p>
+          </div>
+
+          <div class="px-2 pb-2 bd-highlight align-self-start text-left">
+            <div class="bg-dark px-2 py-2 text-center">
+              <div class="d-flex flex-row bd-highlight mb-2 text-left">
+                <div class="bd-highlight flex-fill">
+                  <p class="mb-0 mn-1">
+                    Petru Lancu
+                    <span class="badge badge-pill badge-light ml-1">
+                      <strong><i>RT+</i></strong>
+                    </span>
+                  </p>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 85%"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <span>Level 1</span>
+                </div>
+                <div class="p-1 bd-highlight">
+                  <img src="../../assets/icon/logo.png" alt="image" />
+                </div>
+              </div>
+              <h4 class="m-0">Hello, Welcome to Rect</h4>
+              <p class="mb-0">8 steps still to complete with Infinity</p>
+              <div class="d-flex bd-highlight text-left">
+                <div class="p-1 bd-highlight flex-fill">
+                  <button
+                    type="button"
+                    style="
+                      padding: 4px 20px;
+                      font-size: 10px;
+                      background-color: #313a47;
+                      color: #fff;
+                    "
+                    class="mb-1"
+                  >
+                    TRACKER
+                  </button>
+                  <p class="mb-0">45 <sup>min</sup></p>
+                  <div class="progress mb-2">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 95%"
+                      aria-valuenow="95"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <p class="mb-0">988 <sup>calories</sup></p>
+                  <div class="progress mb-2">
+                    <div
+                      class="progress-bar bg-orange"
+                      role="progressbar"
+                      style="width: 65%"
+                      aria-valuenow="95"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <p class="mb-0">11.3k <sup>steps</sup></p>
+                  <div class="progress mb-2">
+                    <div
+                      class="progress-bar bg-purple"
+                      role="progressbar"
+                      style="width: 40%"
+                      aria-valuenow="95"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <div class="p-1 bd-highlight flex-fill">
+                  <button type="button" class="btn-blue">MATCHER</button>
+                  <div class="border-circle mt-4 text-center">
+                    <div class="border-botton-child py-1">Flex item 1</div>
+                    <div class="py-1">Flex item 2</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-2 pt-1 pb-2 bd-highlight align-self-end">
+            <p class="text-left">
+              head over to the coach tab on the home screen for a full
+              walk-through
+            </p>
+
+            <div class="text-center">
+              <button class="light" type="button" (click)="nextSlide()">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div
+          class="d-flex flex-column bd-highlight mb-3 health-section justify-content-between px-2"
+        >
+          <div class="p-2 bd-highlight align-self-start text-left">
+            <div class="text-right">
+              <button
+                type="button"
+                class="skip text-white"
+                (click)="nextSlide()"
+              >
+                skip
+              </button>
+            </div>
+            <h3 class="mt-0">Rectime Plus</h3>
+            <p class="mb-1">
+              Enjoy full access to our premium services for ninty-days on the
+              house!
+            </p>
+            <span class="badge badge-pill badge-light"
+              ><strong><i>RT+</i></strong></span
+            >
+          </div>
+
+          <div class="p-2 bd-highlight align-self-start text-left">
+            <ul class="pl-0">
+              <li>
+                <i class="fa fa-angle-double-right mr-1 green-icon"></i>
+                No Limits
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right mr-1 green-orange-light"></i>
+                Unlimited Matchmaking
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right mr-1 green-blue"></i>
+                Extra League Settings
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right mr-1 green-purple"></i>
+                Exclusive Content
+              </li>
+              <li>
+                <i class="fa fa-angle-double-right mr-1 green-orange"></i>
+                Season Pass
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-2 bd-highlight plus">
+            <div class="text-center">
+              <button class="primary mb-1">90 DAY TRIAL</button>
+            </div>
+            <p class="mb-1">billed £69.99/year**</p>
+            <div class="mb-1 d-flex bd-highlight align-items-center">
+              <div class="border-left-bg bd-highlight"></div>
+              <div class="bd-highlight px-1">or</div>
+              <div class="border-left-bg bd-highlight"></div>
+            </div>
+            <h4 class="mt-0 mb-1">60 DAY TRIAL</h4>
+            <p class="mb-1">billed £7.99/month**</p>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
 </ion-content>
