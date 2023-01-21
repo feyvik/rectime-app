@@ -1,0 +1,157 @@
+<div class="feeds-page">
+  <div class="scroll">
+    <ul
+      class="nav nav-tabs nav-tabs-bordered py-2"
+      id="borderedTab"
+      role="tablist"
+    >
+      <li class="nav-item text-nowrap px-2" role="presentation">
+        <button
+          class="nav-link text-nowrap pb-2 active"
+          id="feeds-tab"
+          data-toggle="tab"
+          data-target="#feeds"
+          type="button"
+          role="tab"
+          aria-controls="feeds"
+          aria-selected="true"
+        >
+          <ion-icon name="document-text-outline"></ion-icon>
+          <p class="m-0 title text-nowrap">RT NEWS</p>
+        </button>
+      </li>
+      <li class="nav-item text-nowrap px-2" role="presentation">
+        <button
+          class="nav-link text-nowrap pb-2"
+          id="circle-tab"
+          data-toggle="tab"
+          data-target="#circle"
+          type="button"
+          role="tab"
+          aria-controls="circle"
+          aria-selected="false"
+        >
+          <ion-icon name="people-outline"></ion-icon>
+          <p class="m-0 title text-nowrap">CIRCLE</p>
+        </button>
+      </li>
+      <li class="nav-item text-nowrap px-2" role="presentation">
+        <button
+          class="nav-link text-nowrap pb-2"
+          id="match-tab"
+          data-toggle="tab"
+          data-target="#match"
+          type="button"
+          role="tab"
+          aria-controls="match"
+          aria-selected="false"
+        >
+          <ion-icon name="code-slash-outline"></ion-icon>
+          <p class="m-0 title text-nowrap">MATCH UP</p>
+        </button>
+      </li>
+      <li class="nav-item text-nowrap px-2" role="presentation">
+        <button
+          class="nav-link text-nowrap pb-2"
+          id="venue-tab"
+          data-toggle="tab"
+          data-target="#venue"
+          type="button"
+          role="tab"
+          aria-controls="venue"
+          aria-selected="true"
+        >
+          <ion-icon name="subway-outline"></ion-icon>
+          <p class="m-0 title text-nowrap">VENUES</p>
+        </button>
+      </li>
+      <li class="nav-item text-nowrap px-2" role="presentation">
+        <button
+          class="nav-link text-nowrap pb-2"
+          id="expert-tab"
+          data-toggle="tab"
+          data-target="#expert"
+          type="button"
+          role="tab"
+          aria-controls="expert"
+          aria-selected="false"
+        >
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <p class="m-0 title text-nowrap">EXPERTS</p>
+        </button>
+      </li>
+      <li class="nav-item text-nowrap px-2" role="presentation">
+        <button
+          class="nav-link text-nowrap pb-2"
+          id="shop-tab"
+          data-toggle="tab"
+          data-target="#shop"
+          type="button"
+          role="tab"
+          aria-controls="shop"
+          aria-selected="false"
+        >
+          <ion-icon name="link-outline"></ion-icon>
+          <p class="m-0 title text-nowrap">SHOP</p>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="feeds"
+      role="tabpanel"
+      aria-labelledby="feeds-tab"
+    >
+      <app-carousel></app-carousel>
+      <app-card-feeds></app-card-feeds>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="circle"
+      role="tabpanel"
+      aria-labelledby="circle-tab"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="match"
+      role="tabpanel"
+      aria-labelledby="match-tab"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade show"
+      id="venue"
+      role="tabpanel"
+      aria-labelledby="venue-tab"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="expert"
+      role="tabpanel"
+      aria-labelledby="expert-tab"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="shop"
+      role="tabpanel"
+      aria-labelledby="shop-tab"
+    >
+      ...
+    </div>
+  </div>
+
+  <div class="notification">
+    <a routerLink="/user-dashboard/notification">
+      <ion-icon name="infinite-outline"></ion-icon>
+    </a>
+  </div>
+</div>

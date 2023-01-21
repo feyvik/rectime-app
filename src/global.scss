@@ -55,14 +55,13 @@ h1 {
 
 .swiper-pagination-bullet-active {
   background: black !important;
-  width: 20px;
-  border-radius: 4px;
 }
 p {
   font-size: 14px;
 }
 span {
   font-size: 12px;
+  line-height: unset;
 }
 small {
   font-size: 10px;
@@ -76,4 +75,17 @@ button {
 }
 .progress {
   height: 0.4rem !important;
+}
+.scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.scroll::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  background-color: rgba(12, 12, 12, 0);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #aab7cf;
 }

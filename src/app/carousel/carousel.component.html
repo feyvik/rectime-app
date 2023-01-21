@@ -1,0 +1,36 @@
+<swiper
+  [autoplay]="true"
+  [keyboard]="true"
+  [pagination]="true"
+  [scrollbar]="true"
+  [allowTouchMove]="false"
+  [zoom]="true"
+>
+  <ng-template swiperSlide>
+    <div class="row m-0 p-0 mb-4">
+      <div class="col-12 p-0 pb-2">
+        <div class="bg-dark text-white py-2">
+          <div class="d-flex text-center justify-content-center">
+            <div class="notification mr-2">
+              <a routerLink="/user-dashboard/notification">
+                <ion-icon name="infinite-outline"></ion-icon>
+              </a>
+            </div>
+            <div class="notification">
+              <a routerLink="/user-dashboard/notification">
+                <ion-icon name="infinite-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+          <h6 class="mb-0">You’re almost there, Infinity is waiting</h6>
+          <p class="title-text">
+            Infinity follows you everywhere but in order to match with players
+            you will need to complete the ability tests
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide></ng-template>
+  <ng-template swiperSlide></ng-template>
+</swiper>
