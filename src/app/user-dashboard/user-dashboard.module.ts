@@ -13,6 +13,7 @@ import { FeedsComponent } from '../feeds/feeds.component';
 import { CarouselComponent } from '../carousel/carousel.component';
 import { SwiperModule } from 'swiper/angular';
 import { CardFeedsComponent } from '../card-feeds/card-feeds.component';
+import { SportInfoComponent } from '../sport-info/sport-info.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -28,6 +29,7 @@ import { CardFeedsComponent } from '../card-feeds/card-feeds.component';
     FeedsComponent,
     CarouselComponent,
     CardFeedsComponent,
+    SportInfoComponent,
   ],
 })
 export class UserDashboardPageModule {}

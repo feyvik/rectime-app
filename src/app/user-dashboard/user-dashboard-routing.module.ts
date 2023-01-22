@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserDashboardPage } from './user-dashboard.page';
 import { NotificationComponent } from '../notification/notification.component';
 import { FeedsComponent } from '../feeds/feeds.component';
+import { SportInfoComponent } from '../sport-info/sport-info.component';
 const routes: Routes = [
   {
     path: '',
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'notification',
     component: NotificationComponent,
+  },
+  {
+    path: 'sport-info',
+    component: SportInfoComponent,
   },
 ];
 

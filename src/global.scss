@@ -72,6 +72,8 @@ button {
   background: none;
   border-radius: 8px;
   text-transform: uppercase;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .progress {
   height: 0.4rem !important;

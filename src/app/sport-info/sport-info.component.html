@@ -1,0 +1,118 @@
+<main class="container pt-5 pb-2">
+  <h1>Golf</h1>
+  <p>
+    Infinity makes matchmaking easy but to make it meaningful we ask for total
+    honestly when answering
+  </p>
+
+  <div class="mb-4">
+    <div class="mt-2">
+      <label class="pl-3" for="Woods">Woods</label>
+      <ion-range
+        id="Woods"
+        [dualKnobs]="true"
+        [value]="{ lower: 88, upper: 100 }"
+        [pin]="true"
+        [min]="0"
+        [max]="100"
+        [pinFormatter]="pinFormatter"
+      ></ion-range>
+    </div>
+    <div class="mt-2">
+      <label class="pl-3" for="Irons">Irons</label>
+      <ion-range
+        id="Irons"
+        [dualKnobs]="true"
+        [value]="{ lower: 71, upper: 100 }"
+        [pin]="true"
+        [min]="0"
+        [max]="100"
+        [pinFormatter]="pinFormatter"
+      ></ion-range>
+    </div>
+    <div class="mt-2">
+      <label class="pl-3" for="Wedges">Wedges</label>
+      <ion-range
+        id="Wedges"
+        [dualKnobs]="true"
+        [value]="{ lower: 78, upper: 100 }"
+        [pin]="true"
+        [min]="0"
+        [max]="100"
+        [pinFormatter]="pinFormatter"
+      ></ion-range>
+    </div>
+    <div class="mt-2">
+      <label class="pl-3" for="Putting">Putting</label>
+      <ion-range
+        id="Putting"
+        [dualKnobs]="true"
+        [value]="{ lower: 10, upper: 100 }"
+        [pin]="true"
+        [min]="0"
+        [max]="100"
+        [pinFormatter]="pinFormatter"
+      ></ion-range>
+    </div>
+    <div class="mt-2">
+      <label class="pl-3" for="Ball Control">Ball Control</label>
+      <ion-range
+        id="Ball Control"
+        [dualKnobs]="true"
+        [value]="{ lower: 10, upper: 100 }"
+        [pin]="true"
+        [min]="0"
+        [max]="100"
+        [pinFormatter]="pinFormatter"
+      ></ion-range>
+    </div>
+  </div>
+
+  <div class="mb-2">
+    <h4>Handicap</h4>
+    <button
+      *ngFor="let tons of availableSports; let ati = index"
+      (click)="toggleSelected(ati, 'availableSports')"
+      type="button"
+      class="text-nowrap btn mb-2 mr-2"
+      [ngClass]="
+        availableSports[ati].selected ? 'button-dark' : 'button-border'
+      "
+    >
+      {{ tons.text }}
+    </button>
+  </div>
+
+  <div class="mb-2">
+    <h4>Preferred Game Type</h4>
+    <button
+      *ngFor="let pgt of preferredGameType; let pgti = index"
+      (click)="toggleSelected(pgti, 'preferredGameType')"
+      type="button"
+      class="text-nowrap btn mb-2 mr-2"
+      [ngClass]="
+        preferredGameType[pgti].selected ? 'button-dark' : 'button-border'
+      "
+    >
+      {{ pgt.text }}
+    </button>
+  </div>
+  <div class="mb-2">
+    <h4>Dominant Hand</h4>
+    <button
+      *ngFor="let dh of dominantHand; let dhi = index"
+      (click)="toggleSelected(dhi, 'dominantHand')"
+      type="button"
+      class="text-nowrap btn mb-2 mr-2"
+      [ngClass]="dominantHand[dhi].selected ? 'button-dark' : 'button-border'"
+    >
+      {{ dh.text }}
+    </button>
+  </div>
+
+  <div class="mb-1 py-2 px-2 align-items-center">
+    <a routerLink="/user-dashboard/feeds">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </a>
+  </div>
+</main>

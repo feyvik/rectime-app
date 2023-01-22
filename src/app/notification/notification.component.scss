@@ -1,0 +1,171 @@
+main {
+  background-color: #493d59;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #fff !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #606060 !important;
+  }
+  .notification-card {
+    background-color: #1b2135;
+    width: 100%;
+    min-height: 40vh;
+    position: relative;
+    .notify-bell {
+      position: absolute;
+      top: -12px;
+      left: -10px;
+      ion-icon {
+        color: #fff;
+        background-color: red;
+        font-size: 30px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+    .notify-header {
+      border-bottom: 1px solid;
+    }
+    .notify-info-one {
+      font-size: 12px;
+      ion-icon {
+        color: #fff;
+        background-color: #f8a91b;
+        padding: 4px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+    .notify-info-two {
+      font-size: 12px;
+      ion-icon {
+        background-color: #be8dcb;
+        color: #fff;
+        padding: 4px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+    .notify-info-three {
+      font-size: 12px;
+      ion-icon {
+        background-color: #3c9fcd;
+        color: #fff;
+        padding: 4px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+    .notify-info-four {
+      font-size: 12px;
+      ion-icon {
+        background-color: #13717a;
+        color: #fff;
+        padding: 4px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+    .notify-info-more-icon {
+      ion-icon {
+        background-color: #8282af;
+        color: #fff;
+        padding: 4px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+    .border-bottom {
+      border-bottom: 0.5px solid rgb(71, 71, 71) !important;
+    }
+  }
+  .activity-card {
+    background-color: #1b2135;
+    width: 100%;
+    position: relative;
+    .activity-card-vs {
+      position: absolute;
+      top: -12px;
+      left: -10px;
+      span {
+        color: #fff;
+        background-color: rgb(0, 0, 0);
+        font-weight: 800;
+        font-size: 12px;
+        padding: 5px 4px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+    .activity-card-rt {
+      position: absolute;
+      top: -12px;
+      right: -10px;
+      span {
+        color: #fff;
+        background-color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 800;
+        padding: 2px 10px;
+        border-radius: 20px;
+        border: 2px solid #fff;
+      }
+    }
+    .img-box {
+      background-color: rgb(0, 0, 0);
+      font-size: 16px;
+      font-weight: 800;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+    .notify-info-more-icon {
+      ion-icon {
+        background-color: #8282af;
+        color: #fff;
+        padding: 4px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+    }
+    .progress-bar {
+      background-color: #be8dcb;
+    }
+    .button-no-bg {
+      color: #fff;
+      border: 2px solid #fff;
+      font-size: 10px;
+      padding: 4px 5px;
+    }
+  }
+  a {
+    ion-icon {
+      font-size: 28px;
+      color: #1b2135;
+    }
+  }
+}
